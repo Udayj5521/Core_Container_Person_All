@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="myProjector" class="person_Core.Projector">
+		<property name="name" value="epson"></property>
+		<property name="price" value="45000.00"></property>
+	</bean>
+
+	<bean id="myLaptop" class="person_Core.Laptop">
+
+		<property name="brand" value="DELL"></property>
+		<property name="processor" value="intel_i5"></property>
+		<property name="projector" ref="myProjector"></property>
+
+	</bean>
+
+</beans>
